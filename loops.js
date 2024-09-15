@@ -46,6 +46,17 @@ for (const x of letters) {
     forOfSets += x;
 }
 console.log("FOR OF LOOP In Sets ", forOfSets);
+//MAPS
+const fruits = new Map([
+    ["apples", 500],
+    ["bananas", 300],
+    ["oranges", 200]
+]);
+let forOfMap = "";
+for(const x of fruits){
+    forOfMap += x;
+}
+console.log("FOR OF LOOP In Map", forOfMap);
 
 //**********************************************************************************************************//
 
