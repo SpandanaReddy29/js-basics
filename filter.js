@@ -1,3 +1,5 @@
+                //******************** filter ********************//
+
 //The filter() method creates a new array with array elements that pass a test.
 
 const empInfo = [
@@ -10,14 +12,14 @@ const empInfo = [
 const senior = empInfo.filter(ele => {
     return ele.salary > 90000 && ele.position === "Senior"
 });
-console.log(senior);
+console.log("Filter on basis of salary and position",senior);
 
 const seniorName = empInfo
     .filter(ele =>  ele.salary > 70000 && ele.position === "Senior")
     .map(ele => ele.name)
-console.log(seniorName);
+console.log("Filter name on basis of salary and position", seniorName);
 
 const newSeniorName = empInfo.filter(ele => {
     return ele.salary > 90000 || ele.position === "Senior"
 })
-console.log(seniorName);
+console.log("Filter name on basis of salary or position",seniorName);

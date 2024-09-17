@@ -1,82 +1,53 @@
-//Prototype - when we want the property or method to attach to evey instance of a function
-function Car(options) {
-    this.title = options.title
-};
-Car.prototype.drive = function() {
-    return 'vroom'
-};
-const car = new Car({title: 'Focus'});
-const c1 = car.drive();
-console.log(c1);
-console.log(car);
+                //******************** CLASSES ********************//
+//keyword class to create a class
+//Always add a method named constructor().
+//The constructor method is called automatically when a new object is created
+//constructor method is used to initialize object properties
+//It is a template for JavaScript objects.
+//If you do not define a constructor method, JavaScript will add an empty constructor method
+//class declarations are not hoisted i.e., must declare a class before using it
 
-function Toyota(options) {
-    Car.call(this, options);
-    this.color = options.color;
-}
-Toyota.prototype = Object.create(Car.prototype);
-Toyota.prototype.constructor = Toyota;
-Toyota.prototype.honk = function () {
-    return 'beep';
-};
-const toyota = new Toyota({ color: 'red', title: 'Daily Driver' });
-const t1 = toyota.drive();
-const t2 = toyota.honk();
-console.log(toyota);
-console.log(t1);
-console.log(t2);
-
-//Refractor using ES6 Classes
-
-class CarES6 {
-    constructor({ title }) {
-        this.title = title;
+class Car {
+    constructor(name, year) {
+        this.name = name;
+        this.year = year;
     }
-    drive() {
-        return 'vroom';
+    age() {
+        const date = new Date();
+        return date.getFullYear() - this.year;
     }
 }
 
-class ToyotaES6 extends CarES6 {
-    constructor(options) {
-        // Call inherited Class' (CarES6) same name method
-        // === CarES6.constructor(); is called with help of super
-        super(options);
-        this.color = options.color;
+//For creating objects using classes
+const myCar1 = new Car("Ford", 2014);
+const myCar2 = new Car("Audi", 2019);
+console.log("My car is " + myCar1.age() + " years old.");
+
+//**********************************************************************************************************//
+
+                //******************** INHERITENCE ********************//
+
+//extends creates class inheritance
+//inherites all the methods of the class
+//super() method refers to the parent class
+//super() method in constructor, we call parents constructor method & gets access to parents properties & methods
+class CarDetails {
+    constructor(brand) {
+        this.carname = brand;
     }
-    honk() {
-        return 'beep';
-    }
-}
-
-const carES6 = new CarES6({title: 'Toyota'});
-const c2 = carES6.drive();
-
-const toyotaES6 = new ToyotaES6({ color: 'red', title: 'Daily Driver' });
-const t3 = toyotaES6.honk();
-
-
-// Create a sub-class of Moster called Snake with bite() method.
-// Snake instance (given as argument) should have health deducated by 10.
-class Monster {
-    constructor(options) {
-        this.health = 100;
-        this.name = options.name;
+    present() {
+        return 'I have a ' + this.carname;
     }
 }
-
-class Snake extends Monster {
-    constructor(options) {
-        super(options);
+class Model extends CarDetails {
+    constructor(brand, mod) {
+        super(brand);
+        this.model = mod;
     }
-    bite(snake) {
-        snake.health = 0.9 * snake.health;
-        return snake;
+    show() {
+        return this.present() + ', it is a ' + this.model;
     }
 }
-
-const snake1 = new Snake({ name: 'Big Snake' });
-const snake2 = new Snake({ name: 'Little Snake' });
-const s2 = snake2.bite(snake1);
-console.log(snake1);
-console.log(snake2);
+let myCar = new Model("Ford", "Mustang");
+const carInherited = myCar.show();
+console.log(carInherited);

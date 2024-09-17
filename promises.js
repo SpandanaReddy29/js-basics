@@ -1,3 +1,6 @@
+//A Promise is an Object that links Producing code and Consuming code
+
+
 const promise = new Promise((resolve, reject) => {
     resolve(); 
     // reject();

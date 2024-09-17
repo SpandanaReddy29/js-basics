@@ -6,7 +6,7 @@ let sum = 0;
 sum = num.reduce((sum, ele) => {
     return sum + ele
 }, 0);
-console.log(sum);
+console.log("Reduce Array values",sum);
 
 const primaryColors = [
     {color: 'red'},

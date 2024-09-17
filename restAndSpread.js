@@ -1,10 +1,14 @@
 const defaultColors = ['red', 'green'];
 const userFavoriteColors = ['orange', 'yellow'];
 
+				//******************** spread ********************//
+
 //Spread operator allows us to quickly copy all or part of an existing array or object into another array or object
 //The ... operator expands an iterable (like an array) into more elements:
+//The ... operator can be used to expand an iterable into more arguments for function calls
+
 const spreadColors = ['blue', ...defaultColors, ...userFavoriteColors];
-console.log(spreadColors);
+console.log("Spread Operator in Array",spreadColors);
 
 const myVehicle = {
     brand: 'Ford',
@@ -18,7 +22,7 @@ const updateMyVehicle = {
 };
 const myUpdatedVehicle = { ...myVehicle, ...updateMyVehicle };
 //if same properties exist with different values, the last updated value get stored in updated object
-console.log(myUpdatedVehicle);
+console.log("Spread Operator in Objects",myUpdatedVehicle);
 
 //Spread operator is often used in combination with destructuring.
 const numb = [1, 2, 3, 4, 5, 6];
@@ -31,6 +35,8 @@ const normalAddNumbers = (numbers) => {
 }
 const result1 = normalAddNumbers([1,2,3,4,5]);
 console.log(result1);
+
+				//******************** rest ********************//
 
 //The rest parameter syntax allows a function to accept an indefinite number of arguments as an array
 //should be last parameter in function defination

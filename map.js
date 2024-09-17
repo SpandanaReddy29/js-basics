@@ -3,7 +3,7 @@
 
 const num = [1,2,3,4,5,6];
 let doubledNum = num.map(ele => ele * 2);
-console.log(doubledNum);
+console.log("Map values",doubledNum);
 
 const images = [
     {length: 2, breadth: 4},
@@ -17,7 +17,7 @@ let newImage = images.map(ele => {
         breadth: ele.breadth + 1
     }
 });
-console.log(newImage);
+console.log("Map over array of object",newImage);
 
 let areaImage = images.map(ele => {
     return {
@@ -25,14 +25,14 @@ let areaImage = images.map(ele => {
         area: ele.length * ele.breadth
     }
 })
-console.log(areaImage);
+console.log("Map over Array of Object with addition of new property",areaImage);
 
 let areaNewImage = images.map(ele => {
     return {
         area: ele.length * ele.breadth
     }
 })
-console.log(areaNewImage);
+console.log("Map over Array of Object",areaNewImage);
 
 const implementImages = (array, a=5, b=5) => {
     return array.map(ele => {
@@ -43,4 +43,4 @@ const implementImages = (array, a=5, b=5) => {
     })
 };
 const newArray = implementImages(images, 10, 20);
-console.log(newArray);
+console.log("Map over Array of Object with default values",newArray);
