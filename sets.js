@@ -47,25 +47,19 @@ for (const i of valuesOfSets) { //list all values
 }
 console.log("List of all values", listOfValues);
 
-//**********************************************************************************************************//
-
 //********* keys() *********//
 //method returns an Iterator object with the values in a Set
 //A Set has no keys, so keys() returns the same as values()
 //This makes Sets compatible with Maps
-
 let listOfValuesWithKeys = "";
 for (const x of letters.keys()) {
     listOfValuesWithKeys += x;
 }
 console.log("List of all values with keys", listOfValuesWithKeys);
 
-//**********************************************************************************************************//
-
 //********* entries() *********//
 //method is supposed to return a [key,value] pair from an object
 //method returns an Iterator with [value,value] pairs from a Set has it doesnt have keys
-
 let listOfValuesWithEntries = "";
 for (const entry of letters.entries()) {
     listOfValuesWithEntries += entry;

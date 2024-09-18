@@ -92,7 +92,8 @@ console.log("Match All Text",matchAllText);
 
 //********* slice() *********//
 // extracts a part of a string and returns the extracted part in a new string will take 2 parameters.
-//If you omit the 2nd parameter, then method will slice out the rest of the string
+//1st parameter = start position for slicing
+//2nd parametr = end position for slicing, if omitted will slice out the rest of the string
 //If a parameter is negative, the position is counted from the end of the string
 //If value of 1st parameter is greater than 2nd parameter it will not swap arguments
 const sliceStr = str.slice(7, 13);
@@ -108,9 +109,9 @@ console.log("Part of String with 1st parameter greater", sliceStr6);
 
 //********* substring() *********//
 //is similar to slice, difference is that negative indexes is not accepted.
-//If you omit the 2nd parameter, substring() will slice out the rest of the string.
 //1st paramenter - position to start the extraction
 //2nd parameter - where extraction to end
+//If you omit the 2nd parameter, substring() will slice out the rest of the string.
 //If value of 1st parameter is greater than 2nd parameter it will swap arguments
 const subStringStr = str.substring(2,6);
 console.log("Substring",subStringStr);

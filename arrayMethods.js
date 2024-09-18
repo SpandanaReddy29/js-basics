@@ -2,7 +2,7 @@ const fruits = ["Banana", "Orange", "Apple", "Mango"];
 const colors = ["Red", "Green", "Yellow", "Pink"];
 const numbers = [4, 9, 16, 25, 29];
 
-//********* length *********//
+                //********* length *********//
 const size = fruits.length;
 console.log("length",size);
 
