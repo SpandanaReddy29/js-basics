@@ -1,24 +1,24 @@
 //Prototype - when we want the property or method to attach to evey instance of a function
 
 function Car(options) {
-    this.title = options.title
+  this.title = options.title
 };
-Car.prototype.drive = function() {
-    return 'vroom'
+Car.prototype.drive = function () {
+  return 'vroom'
 };
-const car = new Car({title: 'Focus'});
+const car = new Car({ title: 'Focus' });
 const c1 = car.drive();
 console.log(c1);
 console.log(car);
 
 function Toyota(options) {
-    Car.call(this, options);
-    this.color = options.color;
+  Car.call(this, options);
+  this.color = options.color;
 }
 Toyota.prototype = Object.create(Car.prototype);
 Toyota.prototype.constructor = Toyota;
 Toyota.prototype.honk = function () {
-    return 'beep';
+  return 'beep';
 };
 const toyota = new Toyota({ color: 'red', title: 'Daily Driver' });
 const t1 = toyota.drive();
@@ -29,30 +29,30 @@ console.log(t2);
 
 //**********************************************************************************************************//
 
-                //******************** CLASSES ********************//
+//******************** CLASSES ********************//
 
 //Refractor using ES6 Classes
 
 class CarES6 {
-    constructor({ title }) {
-        this.title = title;
-    }
-    drive() {
-        return 'vroom';
-    }
+  constructor({ title }) {
+    this.title = title;
+  }
+  drive() {
+    return 'vroom';
+  }
 }
 
 class ToyotaES6 extends CarES6 {
-    constructor(options) {
-        super(options);
-        this.color = options.color;
-    }
-    honk() {
-        return 'beep';
-    }
+  constructor(options) {
+    super(options);
+    this.color = options.color;
+  }
+  honk() {
+    return 'beep';
+  }
 }
 
-const carES6 = new CarES6({title: 'Toyota'});
+const carES6 = new CarES6({ title: 'Toyota' });
 const c2 = carES6.drive();
 
 const toyotaES6 = new ToyotaES6({ color: 'red', title: 'Daily Driver' });
@@ -62,20 +62,20 @@ const t3 = toyotaES6.honk();
 // Create a sub-class of Moster called Snake with bite() method.
 // Snake instance (given as argument) should have health deducted by 10.
 class Monster {
-    constructor(options) {
-        this.health = 100;
-        this.name = options.name;
-    }
+  constructor(options) {
+    this.health = 100;
+    this.name = options.name;
+  }
 }
 
 class Snake extends Monster {
-    constructor(options) {
-        super(options);
-    }
-    bite(snake) {
-        snake.health = 0.9 * snake.health;
-        return snake;
-    }
+  constructor(options) {
+    super(options);
+  }
+  bite(snake) {
+    snake.health = 0.9 * snake.health;
+    return snake;
+  }
 }
 
 const snake1 = new Snake({ name: 'Big Snake' });

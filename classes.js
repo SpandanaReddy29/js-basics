@@ -1,4 +1,4 @@
-                //******************** CLASSES ********************//
+//******************** CLASSES ********************//
 //keyword class to create a class
 //Always add a method named constructor().
 //The constructor method is called automatically when a new object is created
@@ -8,14 +8,14 @@
 //class declarations are not hoisted i.e., must declare a class before using it
 
 class Car {
-    constructor(name, year) {
-        this.name = name;
-        this.year = year;
-    }
-    age() {
-        const date = new Date();
-        return date.getFullYear() - this.year;
-    }
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  age() {
+    const date = new Date();
+    return date.getFullYear() - this.year;
+  }
 }
 
 //For creating objects using classes
@@ -25,28 +25,28 @@ console.log("My car is " + myCar1.age() + " years old.");
 
 //**********************************************************************************************************//
 
-                //******************** INHERITENCE ********************//
+//******************** INHERITENCE ********************//
 
 //extends creates class inheritance
 //inherites all the methods of the class
 //super() method refers to the parent class
 //super() method in constructor, we call parents constructor method & gets access to parents properties & methods
 class CarDetails {
-    constructor(brand) {
-        this.carname = brand;
-    }
-    present() {
-        return 'I have a ' + this.carname;
-    }
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return 'I have a ' + this.carname;
+  }
 }
 class Model extends CarDetails {
-    constructor(brand, mod) {
-        super(brand);
-        this.model = mod;
-    }
-    show() {
-        return this.present() + ', it is a ' + this.model;
-    }
+  constructor(brand, mod) {
+    super(brand);
+    this.model = mod;
+  }
+  show() {
+    return this.present() + ', it is a ' + this.model;
+  }
 }
 let myCar = new Model("Ford", "Mustang");
 const carInherited = myCar.show();
