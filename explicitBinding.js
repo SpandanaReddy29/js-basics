@@ -80,7 +80,7 @@ console.log("Bind method", bind2 );
 console.log("Bind method", bind3 );
 
 //Bind Chaining
-//Bindi will always bound to first object which is passed as reference
+//Binding will always bound to first object which is passed as reference
 function f() {
   console.log(this.name)
 }
