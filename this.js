@@ -2,7 +2,9 @@
 //this keyword is used to reference something
 //Depends on the context of which in
 //this keyword refers to parent object in normal function
-//this keyword in arrow function points to parent of nested function
+//this keyword in arrow function points to parent normal function,
+//if doesnt have any parent function it will point to window onject the o/p will be undefined
+//we cant manipulate the context of arrow function
 
 let user = {
   fName: "Ushika",
