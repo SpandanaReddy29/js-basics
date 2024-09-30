@@ -1,4 +1,5 @@
-//******************** CLASSES ********************//
+                //******************** CLASSES ********************//
+//classes are blueprints to the objects which consist of properties, methods
 //keyword class to create a class
 //Always add a method named constructor().
 //The constructor method is called automatically when a new object is created
@@ -25,8 +26,7 @@ console.log("My car is " + myCar1.age() + " years old.");
 
 //**********************************************************************************************************//
 
-//******************** INHERITENCE ********************//
-
+                //******************** INHERITENCE ********************//
 //extends creates class inheritance
 //inherites all the methods of the class
 //super() method refers to the parent class
@@ -51,3 +51,5 @@ class Model extends CarDetails {
 let myCar = new Model("Ford", "Mustang");
 const carInherited = myCar.show();
 console.log(carInherited);
+
+//**********************************************************************************************************//
