@@ -54,9 +54,9 @@ console.log("New array", a);
 //Can be used to find max and min value in an array
 //Math.max and Math.min works only on numbers not on arrays
 const numbers = [6, 10, 77, 100, 65, 85, 101];
-const max = Math.max.apply(null, numbers); // we dont wont to give any reference
+const max = Math.max.apply(null, numbers); // we dont wont to give any reference object
 console.log("MAX", max);
-const min = Math.min.apply(null, numbers); // we dont wont to give any reference
+const min = Math.min.apply(null, numbers); // we dont wont to give any reference object
 console.log("MIN", min);
 
 //**********************************************************************************************************//

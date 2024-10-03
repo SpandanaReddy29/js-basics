@@ -90,17 +90,6 @@ Promise.all([
 }).catch((err) => {
   console.log(err)
 });
-//******************** promise.race ********************//
-//It will give only promise which gets resolved or rejected first
-Promise.race([
-  importantAction("Sravan"),
-  likeVideo("NODE JS"),
-  shareVideo("NODE JS")
-]).then((resp) => {
-  console.log(resp)
-}).catch((err) => {
-  console.log(err)
-});
 //******************** promise.allSettled ********************//
 //Works same as promise.all
 //Will returns all the promise regardless of fullfilled or rejected
@@ -108,6 +97,17 @@ Promise.allSettled([
   importantAction("Spandana"),
   likeVideo("React"),
   shareVideo("React")
+]).then((resp) => {
+  console.log(resp)
+}).catch((err) => {
+  console.log(err)
+});
+//******************** promise.race ********************//
+//It will give only promise which gets resolved or rejected first
+Promise.race([
+  importantAction("Sravan"),
+  likeVideo("NODE JS"),
+  shareVideo("NODE JS")
 ]).then((resp) => {
   console.log(resp)
 }).catch((err) => {

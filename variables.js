@@ -23,8 +23,7 @@ scope();
 //var is functional scope, while let and const are block scope
 //variable declared with var can be redecalred within same scope 
 //variable declared with let or const cannot be redeclared within same scope and gives error Syntax Error
-//variable declared with var is accessible throughtout the program whereas with const and let wont allow
-//const and let throw error as reference error
+//variable declared with var is accessible throughtout the program whereas with const and let wont allow and throw error as reference error
 //variable declared with const should be declared with initial values otherwise throws error SyntaxError with missing initializer
 //variable declared with var, let can be reinitialized, with const throws error TypeError Assignment to constant variable
 
@@ -65,6 +64,7 @@ variableShadowing();
 
                 //****************** Illegal Shadowing ********************//    
 //occurs when trying to shadow a variable using var within the same scope where that variable is already defined using let or const.
+//we can shadow a variable declared with var using let or const but not vice-versa
 
 function illegalVariableShadowing () {
     // let a = "Hello";
@@ -83,7 +83,7 @@ illegalVariableShadowing();
 //**********************************************************************************************************//
 
                 //****************** Hoisting ********************//  
-//hoisting is a behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase
+//hoisting is a behavior where variable or a function declarations are moved to the top of their containing scope during the compilation phase
 //only the declarations are hoisted, not the initializations or assignment
 console.log("Hoisting", host);
 var host = 10; 
@@ -92,7 +92,7 @@ var host = 10;
 //where accessing the variable will result in a ReferenceError.
 //because they are in the Temporal Dead Zone until they are declared.
 function hositingVariables(){
-    console.log("Hositing Different variables",hostVar, hostConst, hostLet);
+    // console.log("Hositing Different variables",hostVar, hostConst, hostLet);
     var hostVar = 10;
     const hostConst = 20;
     let hostLet = 30;

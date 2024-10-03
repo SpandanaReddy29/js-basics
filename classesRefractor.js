@@ -15,8 +15,9 @@ function Toyota(options) {
   Car.call(this, options);
   this.color = options.color;
 }
-Toyota.prototype = Object.create(Car.prototype);
-Toyota.prototype.constructor = Toyota;
+Toyota.prototype = Object.create(Car.prototype);//inherit the properties of Car, it will replace the DOG constructor function
+Toyota.prototype.constructor = Toyota;//To have the constructor function of itself
+//Addition of new property to prototype of Dog
 Toyota.prototype.honk = function () {
   return 'beep';
 };
